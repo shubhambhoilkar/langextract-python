@@ -46,7 +46,7 @@ def extract_from_text(text: str):
     return result
 
 if __name__ == "__main__":
-    url = "https://english.mahamoney.com/what-is-usage-based-insurance-and-how-can-it-reduce-my-auto-insurance-premium"
+    url = "https://english.mahamoney.com"
     article = fetch_article_text(url)
     extraction = extract_from_text(article)
     print(extraction.to_dict())
@@ -57,4 +57,5 @@ if __name__ == "__main__":
         if hasattr(html.data):
             f.write(html.data)
         else:
+
             f.write(html)
