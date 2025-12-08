@@ -1,2 +1,2 @@
-# langetract-python
+# langextract-python
 Extracting Keywords using python Library LangExtract 
