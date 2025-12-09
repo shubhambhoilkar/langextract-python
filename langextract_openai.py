@@ -89,5 +89,6 @@ def run_openai(url: str):
 # 4. Entry Point
 # --------------------------------------------------------
 if __name__ == "__main__":
-    run_openai("https://english.mahamoney.com/what-is-usage-based-insurance-and-how-can-it-reduce-my-auto-insurance-premium")
+    run_openai("https://english.mahamoney.com")
+
 
