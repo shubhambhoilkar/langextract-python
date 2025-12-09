@@ -13,16 +13,16 @@ def fetch_article_text(url: str) -> str:
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
 
-    # Remove unnecessary tags
     for tag in soup(['script', 'style', 'nav', 'footer', 'header']):
         tag.decompose()
 
-    paragraphs = [p.get_text(separator=' ', strip=True) for p in soup.find_all("p")]
+    paragraphs = [p.get_text(separator=' ', strip=True)
+                  for p in soup.find_all("p")]
     return "\n".join(paragraphs)
 
 
 # --------------------------------------------------------
-# 2. Extract Keywords using LangExtract (OpenAI Model)
+# 2. Extract Keywords (OpenAI version)
 # --------------------------------------------------------
 def extract_from_text(text: str, model_id: str):
     prompt = textwrap.dedent("""
@@ -36,7 +36,7 @@ def extract_from_text(text: str, model_id: str):
 
     examples = [
         lx.data.ExampleData(
-            text="Artificial Intelligence is rapidly changing the technology landscape.",
+            text="Artificial Intelligence is rapidly changing the tech landscape.",
             extractions=[
                 lx.data.Extraction(
                     extraction_class="keyword",
@@ -51,7 +51,7 @@ def extract_from_text(text: str, model_id: str):
         text_or_documents=text,
         prompt_description=prompt,
         examples=examples,
-        model_id=model_id,     # OPENAI MODEL HERE
+        model_id=model_id,
         extraction_passes=1,
         max_workers=4
     )
@@ -63,18 +63,18 @@ def extract_from_text(text: str, model_id: str):
 # 3. Main OpenAI Runner
 # --------------------------------------------------------
 def run_openai(url: str):
-    model = "gpt-3.5-turbo-1106"  # Recommended OpenAI model for LangExtract
+    model = "gpt-4.1"
 
-    # Ensure correct environment variable is used
-    os.environ["OPENAI_API_KEY"] = "openai_api_key"
-    os.environ["LANGEXTRACT_API_KEY"] = ""  # Disable Gemini
+    # MUST NOT manually override OPENAI_API_KEY
+    # LangExtract picks it automatically.
+    if "OPENAI_API_KEY" not in os.environ:
+        raise RuntimeError("OPENAI_API_KEY is not set in your system environment.")
 
     article_text = fetch_article_text(url)
     result = extract_from_text(article_text, model)
 
     pprint(result.to_dict())
 
-    # Save results
     lx.io.save_annotated_documents(
         [result],
         output_name="openai_extracted.jsonl",
@@ -89,6 +89,4 @@ def run_openai(url: str):
 # 4. Entry Point
 # --------------------------------------------------------
 if __name__ == "__main__":
-    run_openai("https://english.mahamoney.com")
-
-
+    run_openai("https://english.mahamoney.com/what-is-usage-based-insurance-and-how-can-it-reduce-my-auto-insurance-premium")
