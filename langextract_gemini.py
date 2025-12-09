@@ -49,8 +49,8 @@ def run_gemini(url: str):
     # Model ID specifically for Gemini
     model = "gemini-2.0-flash"
 
-    article_text = fetch_article(url)
-    result = extract_keywords(article_text, model)
+    article_text = fetch_article_text(url)
+    result = extract_from_text(article_text, model)
 
     pprint(result.to_dict())  # raw structured result
 
@@ -67,3 +67,4 @@ def run_gemini(url: str):
 if __name__ == "__main__":
     os.environ["LANGEXTRACT_API_KEY"] = "YOUR_GEMINI_API_KEY"
     run_gemini("https://example.com/article-url")
+
