@@ -66,7 +66,7 @@ def run_openai(url: str):
     model = "gpt-3.5-turbo-1106"  # Recommended OpenAI model for LangExtract
 
     # Ensure correct environment variable is used
-    os.environ["OPENAI_API_KEY"] = "sk-proj-Y_e8HGSSO1ScDT3BlbkFJTtBBAjbGJ7B53QrlV8ladFQjFq84kZ1dwXpDMsf2TkAuois7MXGLi0Dl7pvZgEW9XBZOSP458A"
+    os.environ["OPENAI_API_KEY"] = "openai_api_key"
     os.environ["LANGEXTRACT_API_KEY"] = ""  # Disable Gemini
 
     article_text = fetch_article_text(url)
@@ -90,3 +90,4 @@ def run_openai(url: str):
 # --------------------------------------------------------
 if __name__ == "__main__":
     run_openai("https://english.mahamoney.com/what-is-usage-based-insurance-and-how-can-it-reduce-my-auto-insurance-premium")
+
