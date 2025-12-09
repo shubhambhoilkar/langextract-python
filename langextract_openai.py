@@ -5,12 +5,11 @@ import langextract as lx
 from pprint import pprint
 from bs4 import BeautifulSoup
 
-# --------------------------------------------------------
 # 1. Fetch Article Text
-# --------------------------------------------------------
 def fetch_article_text(url: str) -> str:
     resp = requests.get(url, timeout=10)
     resp.raise_for_status()
+            ]
     soup = BeautifulSoup(resp.text, "html.parser")
 
     for tag in soup(['script', 'style', 'nav', 'footer', 'header']):
@@ -20,10 +19,7 @@ def fetch_article_text(url: str) -> str:
                   for p in soup.find_all("p")]
     return "\n".join(paragraphs)
 
-
-# --------------------------------------------------------
 # 2. Extract Keywords (OpenAI version)
-# --------------------------------------------------------
 def extract_from_text(text: str, model_id: str):
     prompt = textwrap.dedent("""
         Extract important tools, technologies, concepts, and keywords from this article.
@@ -43,7 +39,6 @@ def extract_from_text(text: str, model_id: str):
                     extraction_text="Artificial Intelligence",
                     attributes={"relevance": "high"}
                 )
-            ]
         )
     ]
 
@@ -55,13 +50,9 @@ def extract_from_text(text: str, model_id: str):
         extraction_passes=1,
         max_workers=4
     )
-
     return result
 
-
-# --------------------------------------------------------
 # 3. Main OpenAI Runner
-# --------------------------------------------------------
 def run_openai(url: str):
     model = "gpt-4.1"
 
@@ -84,9 +75,7 @@ def run_openai(url: str):
     print("Saved: openai_extracted.jsonl")
     return result
 
-
-# --------------------------------------------------------
 # 4. Entry Point
-# --------------------------------------------------------
 if __name__ == "__main__":
     run_openai("https://english.mahamoney.com/what-is-usage-based-insurance-and-how-can-it-reduce-my-auto-insurance-premium")
+
