@@ -1,0 +1,94 @@
+Langextract Task
+Maha Money:
+Articles  
+English:
+	
+
+Net Worth Calculator :
+https://github.com/sameer-fortune4/mahamoney/blob/cdp/WIP/eventSchema/netWorthCalculatorEvent_v1-1.0.0.json
+
+Home Loan Balance Transfer Calculator:
+https://github.com/sameer-fortune4/mahamoney/blob/cdp/WIP/eventSchema/homeLoanBalanceTransferCalculatorEvent_v1-1.0.0.json
+
+Mutual Funds SIP Calculator:
+https://github.com/sameer-fortune4/mahamoney/blob/cdp/WIP/eventSchema/mutualFundsSIPCalculatorEvent_v1-1.0.0.json
+
+SIP Calculator:
+https://github.com/sameer-fortune4/mahamoney/blob/cdp/WIP/eventSchema/sipCalculatorEvent_v1-1.0.0.json
+
+Future Expense Calculator:
+https://github.com/sameer-fortune4/mahamoney/blob/cdp/WIP/eventSchema/futureExpenseCalculatorEvent_v1-1.0.0.json
+
+Loan Repayment Calculator:
+https://github.com/sameer-fortune4/mahamoney/blob/cdp/WIP/eventSchema/loanRepaymentCalculatorEvent_v1-1.0.0.json
+
+Wealth Compounder Calculator:
+wealthCompounderCalculatorEvent v1-1.0.0.json
+pending
+
+Current Expense Calculator:
+currentExpenseCalculatorEvent v1-1.0.0.json
+pending
+
+Child Education Insurance Plan
+childEducationInsurancePlanEvent v1-1.0.0.json
+pending
+
+Retirement Plan Calculator
+retirementPlanCalculatorEvent v1-1.0.0.json
+Done
+ 
+Fixed Deposit Calculator
+fixedDepositCalculatorEvent v1-1.0.0.json
+Done
+ 
+Recurring Deposit Calculator
+recurringDepositCalculatorEvent v1-1.0.0.json
+Done
+ 
+Debt Calculator
+debtCalculatorEvent v1-1.0.0.json
+ 
+Inflation Calculator
+inflationCalculatorEvent v1-1.0.0.json
+Done
+ 
+Post Office Saving Account Calculator
+postOfficeSavingAccountCalculatorEvent v1-1.0.0.json
+Done
+ 
+Post Office RD Calculator
+postOfficeRDCalculatorEvent v1-1.0.0.json
+Done
+ 
+Post Office MIS Calculator
+postOfficeMISCalculatorEvent v1-1.0.0.json
+Pending, Not found
+ 
+Senior Citizen Savings Scheme Calculator
+seniorCitizenSavingsSchemeCalculatorEvent v1-1.0.0.json
+Done
+ 
+Sukanya Samriddhi Yojana Calculator
+sukanyaSamriddhiYojanaCalculatorEvent v1-1.0.0.json
+Done
+ 
+National Savings Time Deposit
+nationalSavingsTimeDepositEvent v1-1.0.0.json
+Done
+ 
+Kisan Vikas Patra (KVP)
+kisanVikasPatra(KVP)Event v1-1.0.0.json
+Done
+ 
+Mahila Samman Savings Certificate
+mahilaSammanSavingsCertificateEvent v1-1.0.0.json
+Done
+ 
+NSC Calculator
+nscCalculatorEvent v1-1.0.0.json
+Done
+ 
+Public Provident Fund Account(PPF)
+publicProvidentFundAccount(PPF)Event v1-1.0.0.json
+Done
