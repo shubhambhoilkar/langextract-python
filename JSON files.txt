@@ -18,15 +18,15 @@ https://github.com/sameer-fortune4/mahamoney/blob/cdp/WIP/eventSchema/loanRepaym
 
 Wealth Compounder Calculator:
 wealthCompounderCalculatorEvent v1-1.0.0.json
-pending
+Done
 
 Current Expense Calculator:
 currentExpenseCalculatorEvent v1-1.0.0.json
-pending
+Done
 
 Child Education Insurance Plan
 childEducationInsurancePlanEvent v1-1.0.0.json
-pending
+Done
 
 Retirement Plan Calculator
 retirementPlanCalculatorEvent v1-1.0.0.json
@@ -42,7 +42,8 @@ Done
  
 Debt Calculator
 debtCalculatorEvent v1-1.0.0.json
- 
+Done
+
 Inflation Calculator
 inflationCalculatorEvent v1-1.0.0.json
 Done
