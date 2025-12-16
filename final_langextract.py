@@ -9,7 +9,7 @@ from openpyxl.styles import Alignment
 import langextract as lx
 
 # CONFIG
-OPENAI_API_KEY = "sk-proj-Y_e8HGSSO1ScDT3BlbkFJTtBBAjbGJ7B53QrlV8ladFQjFq84kZ1dwXpDMsf2TkAuois7MXGLi0Dl7pvZgEW9XBZOSP458A"
+OPENAI_API_KEY = "sk-proj-openai_api_key"
 MODEL = "gpt-4o"
 OUTPUT_FILENAME = "article_keywords.xlsx"
 
@@ -88,25 +88,25 @@ def extract_keywords(text: str):
 # 3) URL groups (correct lists)
 articles = {
     "Marathi": [
-        "https://mahamoney.com/unclaimed-money-check-claim-process-bank-insurance",
-        "https://mahamoney.com/investment-slow-progress-7-year-rule-compound-interest",
-        "https://mahamoney.com/avadhut-sathe-sebi-crackdown-546-crore-impounded-ban",
-        "https://mahamoney.com/demat-account-nomination-digital-process-step-by-step",
-        "https://mahamoney.com/fixed-deposit-investment-tax-rules-tds-itr-important"
+        "https://mahamoney.com/article1-marathi",
+        "https://mahamoney.com/article2-marathi",
+        "https://mahamoney.com/article3-marathi",
+        "https://mahamoney.com/article4-marathi",
+        "https://mahamoney.com/article5-marathi"
     ],
     "English": [
-        "https://english.mahamoney.com/bima-vistaar-affordable-insurance-for-your-familys-peace-of-mind",
-        "https://english.mahamoney.com/life-insurance-payout-for-spouse-protect-your-family-from-creditors",
-        "https://english.mahamoney.com/govt-plans-e-commerce-export-boost-for-msmes",
-        "https://english.mahamoney.com/indias-plastic-industry-a-double-edged-sword-unwrapping-growth-pollution-solutions",
-        "https://english.mahamoney.com/how-agentic-ai-payments-are-transforming-digital-transactions-1"
+        "https://english.mahamoney.com/article1-english",
+        "https://english.mahamoney.com/article2-english",
+        "https://english.mahamoney.com/article3-english",
+        "https://english.mahamoney.com/article4-english",
+        "https://english.mahamoney.com/article5-english"
     ],
     "Hindi": [
-        "https://hindi.mahamoney.com/ai-workslop-myths-reality-economic-losses-and-the-road-to-recovery",
-        "https://hindi.mahamoney.com/from-begging-bowl-to-bread-basket-role-of-m-s-swaminathan-c-subramaniam-and-b-sivaraman",
-        "https://hindi.mahamoney.com/severity-of-financial-fraud-in-india-estimates-prevention-and-technological-solutions",
-        "https://hindi.mahamoney.com/indias-art-market-from-record-auctions-to-new-heights",
-        "https://hindi.mahamoney.com/mutual-fund-total-expense-ratio-what-is-it-and-how-does-it-affect-your-earnings"
+        "https://hindi.mahamoney.com/article1-hindi",
+        "https://hindi.mahamoney.com/article2-hindi",
+        "https://hindi.mahamoney.com/article3-hindi",
+        "https://hindi.mahamoney.com/article4-hindi",
+        "https://hindi.mahamoney.com/article5-hindi"
     ]
 }
 
@@ -187,6 +187,6 @@ def main():
     merge_url_cells(OUTPUT_PATH)
     print("\n✅ Excel created at:", OUTPUT_PATH)
 
-
+# Execution fo Program code!
 if __name__ == "__main__":
     main()
